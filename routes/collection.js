@@ -241,6 +241,17 @@ router.post('/:documentId/:meetingId/finalise', function (req, res, next) {
         });
 });
 
+router.post('/:documentId/:meetingId/delete', function (req, res, next) {
+
+    Meetings
+        .deleteMeeting(req.params.documentId, req.params.meetingId)
+        .then((response) => {
+            res.send(response);
+        })
+        .catch((error) => {
+            res.send(error);
+        });
+});
 
 
 module.exports = router;

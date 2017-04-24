@@ -231,6 +231,21 @@ exports.addAttendees = function (accountId, meetingId, attendees) {
 }
 
 
+exports.deleteMeeting = function(accountId, meetingId) {
+
+      return new Promise((resolve, reject) => {
+        client.executeStoredProcedure(`${collectionUrl}/sprocs/deleteMeeting`, [accountId, meetingId],
+            function (error, response) {
+                console.log("execute");
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(response);
+                }
+
+            });
+    });
+}
 
 
 
