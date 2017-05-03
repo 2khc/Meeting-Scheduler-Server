@@ -19,7 +19,7 @@ var app = express();
 // CORS Settings
 // ==============================================================
 // var whitelist = ['https://alasdairhall.gallery.vsassets.io',/\.gallerycdn\.vsassets\.io$/, /([a-z]*\.)*([a-z])*]/];
-var whitelist = ['https://alasdairhall.gallery.vsassets.io', /([a-z]*\.)*([a-z])*]/];
+var whitelist = ['https://alasdairhall.gallery.vsassets.io', /([a-zA-Z]*\.)?([a-zA-Z]*\.)([a-z])*$/, ];
 // var whitelist = ['/\.gallery.vsassets\.io$'];
 var corsOptions = {
   origin: whitelist,
