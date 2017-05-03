@@ -18,12 +18,13 @@ var app = express();
 
 // CORS Settings
 // ==============================================================
-var whitelist = ['https://alasdairhall.gallery.vsassets.io',/\.gallerycdn\.vsassets\.io$/];
+// var whitelist = ['https://alasdairhall.gallery.vsassets.io',/\.gallerycdn\.vsassets\.io$/, /([a-z]*\.)*([a-z])*]/];
+var whitelist = [/([a-z]*\.)*([a-z])*]/];
 // var whitelist = ['/\.gallery.vsassets\.io$'];
 var corsOptions = {
-  // origin: whitelist,
-  origin: '*'
-  // credentials: true
+  origin: whitelist,
+  // origin: '*'
+  credentials: true
 }
 
 app.use(cors(corsOptions));
