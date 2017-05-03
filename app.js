@@ -22,8 +22,8 @@ var whitelist = ['https://alasdairhall.gallery.vsassets.io',/\.gallerycdn\.vsass
 // var whitelist = ['/\.gallery.vsassets\.io$'];
 var corsOptions = {
   // origin: whitelist,
-  origin: '*',
-  credentials: true
+  origin: '*'
+  // credentials: true
 }
 
 app.use(cors(corsOptions));
