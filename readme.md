@@ -16,7 +16,7 @@
 ```
 npm install
 ```
-<p>To start the server with debug enabled:</p>
+<p>To start the development server with debug enabled:</p>
 
 ```
 DEBUG=*:server node ./bin/www

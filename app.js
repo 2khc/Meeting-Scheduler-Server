@@ -21,7 +21,8 @@ var app = express();
 var whitelist = ['https://alasdairhall.gallery.vsassets.io',/\.gallerycdn\.vsassets\.io$/];
 // var whitelist = ['/\.gallery.vsassets\.io$'];
 var corsOptions = {
-  origin: whitelist,
+  // origin: whitelist,
+  origin: '*',
   credentials: true
 }
 
